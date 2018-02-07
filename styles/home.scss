@@ -1,0 +1,101 @@
+h1 {
+  color: tomato;
+}
+
+body {
+  background: #f5f5f5;
+}
+
+form {
+  display:block;
+  margin-bottom: 10px;
+}
+
+.board {
+  display: inline-block;
+}
+
+.board .board-row {
+  width: 100%;
+  margin: 0px auto;
+  display: flex;
+}
+
+.board {
+  justify-content: space-between;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  background-color: #333;
+  margin: 30px 200px;
+}
+
+.spinner.runanimation {
+  -webkit-animation: sk-rotateplane 1s infinite ease-in-out;
+  animation: sk-rotateplane 1s infinite ease-in-out;
+}
+
+@-webkit-keyframes sk-rotateplane {
+  0% {
+    -webkit-transform: perspective(120px)
+  } 50% {
+    -webkit-transform: perspective(120px) rotateY(180deg)
+  } 100% {
+    -webkit-transform: perspective(120px) rotateY(180deg)  rotateX(180deg)
+  }
+}
+
+@keyframes sk-rotateplane {
+  0% {
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg)
+  } 50% {
+    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg)
+  } 100% {
+    transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+  }
+}
+
+button  {
+	text-decoration:none;
+	color:#333333;
+	font-size:12px;
+	padding:0 15px;
+	line-height:20px;
+	text-align:center;
+  margin: 10px;
+	background-color:#DDDDDD;
+}
+
+button.change:hover {
+  cursor: pointer;
+  background-color: #F89900;
+}
+
+button:focus {
+  outline:0;
+}
+
+button:hover{
+	background-color:#F6F6F6;
+}
+
+.tile {
+  width: 50px;
+  height: 50px;
+  border-width: 5px;
+  background-color: #333;
+  margin: 1px;
+  font-family: monospace;
+  font-size: 24px;
+  font-style: bold;
+  display: flex; /* or inline-flex */
+}
+
+i {
+  margin: auto;
+}
