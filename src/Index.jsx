@@ -29,7 +29,7 @@ function logger({ getState }) {
   }
 }
 
-let store = createStore(gameApp, applyMiddleware(logger, thunk));
+const store = createStore(gameApp, applyMiddleware(logger, thunk));
 
 // Log the initial state
 console.log("initiailized", store.getState())
@@ -37,6 +37,7 @@ console.log("initiailized", store.getState())
 ReactDOM.render(
   <Provider store={store}>
     <App />
-  </Provider>,
+  </Provider>
+  ,
   document.getElementById('react-root')
 );
